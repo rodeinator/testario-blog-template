@@ -880,6 +880,9 @@ a.button span, .button span {
   opacity: 0.85;
   text-transform: none; }
 
+#secondary h1, #secondary h2, #secondary h3, #secondary h4, #secondary h5, #secondary h6 {
+  font-size: 1.5em; }
+
 .clear:before,
 .entry-content:before,
 .comment-content:before,
@@ -1004,3 +1007,14 @@ a.button span, .button span {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+/* =Widgets
+----------------------------------------------- */
+.widget {
+  margin: 0 0 1.5em;
+  /* Make sure select elements fit in widgets */
+  /* Search widget */ }
+  .widget select {
+    max-width: 100%; }
+  .widget .widget-search .search-submit {
+    display: none; }
