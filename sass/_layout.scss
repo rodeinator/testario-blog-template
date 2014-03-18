@@ -1,40 +1,37 @@
 // Layout: Content-Sidebar
+$layout: content-sidebar;
+
 @if $layout == content-sidebar {
-	.content-area {
-		float: left;
-		margin: 0 -25% 0 0;
-		width: 100%;
-	}
-	.site-main {
-		margin: 0 25% 0 0;
-	}
-	.site-content .widget-area { /* Sidebar 1 */
-		float: right;
-		overflow: hidden;
-		width: 25%;
-	}
+
+  .content-area { @include span-columns(12); }
+  .site-content .widget-area { @include span-columns(6); }
+
+  @include media($medium-screen) {
+    .content-area { @include span-columns(9); }
+    .site-content .widget-area { @include span-columns(3); }
+  }
 }
 
 // Layout: Sidebar-Content
 @else if $layout == sidebar-content {
-	.content-area {
-		float: right;
-		margin: 0 0 0 -25%;
-		width: 100%;
-	}
-	.site-main {
-		margin: 0 0 0 25%;
-	}
-	.site-content .widget-area { /* Sidebar 1 */
-		float: left;
-		overflow: hidden;
-		width: 25%;
-	}
+  .content-area {
+    float: right;
+    margin: 0 0 0 -25%;
+    width: 100%;
+  }
+  .site-main {
+    margin: 0 0 0 25%;
+  }
+  .site-content .widget-area { /* Sidebar 1 */
+    float: left;
+    overflow: hidden;
+    width: 25%;
+  }
 }
 
 @if $layout != null {
-	.site-footer {
-		clear: both;
-		width: 100%;
-	}
+  .site-footer {
+    clear: both;
+    width: 100%;
+  }
 }
