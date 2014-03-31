@@ -885,6 +885,15 @@ a.button span, .button span {
 
 #secondary h1, #secondary h2, #secondary h3, #secondary h4, #secondary h5, #secondary h6 {
   font-size: 1.5em; }
+#secondary a {
+  color: #42818c; }
+
+.entry-content ul {
+  list-style-type: disc;
+  margin-bottom: 0.75em;
+  padding-left: 1.5em; }
+.entry-content a {
+  color: #42818c; }
 
 .clear:before,
 .entry-content:before,
